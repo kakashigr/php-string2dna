@@ -21,7 +21,7 @@
 		$dna_string = $dna_convert->get_dna($ascii_string);
 		$fm_string = $dna_convert->get_formatted_dna($dna_string);
 	}
-	if ( empty($dna_string) ) $dna_string = "Your DNA-encoded string will appear here";
+	if ( empty($fm_string) ) $fm_string = "Your DNA-encoded string will appear here";
 
 ?>
 <!DOCTYPE HTML>
@@ -259,10 +259,10 @@
 
 	</div>
 	<?php
-		if ( !empty($dna_string) ) {
+		if ( !empty($fm_string) ) {
 			?>
             <h5>Your DNA Code:</h5>
-            <div id="dna-code-response"><?php echo $dna_string; ?></div>
+            <div id="dna-code-response"><?php echo $fm_string; ?></div>
 			<?php
 		}
 	?>
@@ -271,7 +271,6 @@
         <textarea name="dna-string" placeholder="Enter your text here"><?php echo $ascii_string; ?></textarea>
 		<input type="checkbox" id="dna-custom-map-enabled" />
 		<label for="dna-custom-map-enabled">Use Alternate Map</label>
-
 		<div id="dna-custom-maps-container">
 
 			<?php
